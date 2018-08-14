@@ -116,6 +116,15 @@ section input[type=button]:hover{
 	border-color:white;
 }
 
+footer{
+	font-size:25px;
+	margin-top:50px;
+}
+
+footer a{
+	color:white;
+}
+
 @media screen and (max-width: 900px){
 
 	section input[type=button]{
