@@ -46,7 +46,7 @@ button_upload.addEventListener("change",function(e){
 				
 			});
 
-		},2000);
+		},10); // remplacer ce time-out par la fin du draw image
 
 		
 	}
@@ -187,7 +187,7 @@ function animation_result(stats){
 		valeur = stats[i][0];
 		stats_name.innerHTML = nom + ":";
 		stats_bar.innerHTML = valeur.toFixed(2) + "%";
-		stats_bar.style.width = (valeur + 1 / 1.5) + "%";
+		stats_bar.style.width = ((valeur + 5) / 1.5) + "%";
 		
 	}
 
@@ -201,11 +201,19 @@ bouton_retour.addEventListener("click",function(){
 
 //Fonction qui remet tout comme au début pour recommencer une nouvelle prédiction
 function retour_menu(){
+
+	slide_right(true);
+
 	division_right.classList.remove("appear");
 	division_left.classList.remove("to_left");
 	bouton_retour.classList.remove("show");
 
-	slide_right(true);
+	//Efface  les stats
+	for(i = 0;i < 6;i++)
+	{
+		var stats_bar = stats_list[i].getElementsByTagName("span")[1];
+		stats_bar.style.width = 0 + "%";	
+	}
 }
 
 })();
