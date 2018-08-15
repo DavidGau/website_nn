@@ -198,9 +198,18 @@ img{
 	width:0;
 	visibility: hidden;
 	opacity: 0;
-	transition-delay: 2s;
-	transition-duration: 1s;
+	margin-top: -600px;
+	transition:width 1s 2s,opacity 1s 2s,visibility 0s 2s,margin-top 0s 2s,box-shadow 0s 2s;
 	text-align: left;
+}
+
+.division_stats:nth-child(2).appear{
+	margin-top:-100px;
+	width:50%;
+	visibility: visible;
+	opacity: 1;
+	box-shadow: -5px 0px 0px 0px white;
+	transition:width 1s 2s,opacity 1s 2s,visibility 0s 0s,margin-top 0s 0s,box-shadow 0s 0s; /* Les transitions sont répétés mais le temps changer afin que le tout ne remonte pas de facon étrange */
 }
 
 .division_stats:nth-child(2) p{
@@ -270,18 +279,6 @@ li:nth-child(5) span:nth-child(2){
 
 li:nth-child(6) span:nth-child(2){
 	background-color:#0be881;
-}
-
-.division_stats:nth-child(2){
-	margin-top:-600px;
-}
-
-.division_stats:nth-child(2).appear{
-	margin-top:-100px;
-	width:50%;
-	visibility: visible;
-	opacity: 1;
-	box-shadow: -5px 0px 0px 0px white;
 }
 
 

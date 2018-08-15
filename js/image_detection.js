@@ -21,6 +21,7 @@ let division_left = document.getElementsByClassName("division_stats")[0];
 let stats_list = document.getElementsByTagName("li");
 let bouton_retour = document.getElementsByTagName("button")[0];
 
+
 button_upload.addEventListener("change",function(e){
 
 
@@ -212,8 +213,9 @@ function retour_menu(){
 	for(i = 0;i < 6;i++)
 	{
 		var stats_bar = stats_list[i].getElementsByTagName("span")[1];
-		stats_bar.style.width = 0 + "%";	
+		stats_bar.style.width = 0;	
 	}
+
 }
 
 })();
